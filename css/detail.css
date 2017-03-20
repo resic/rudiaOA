@@ -1,0 +1,78 @@
+.wrap,.approver{
+    width: 66.66%;
+    background-color: #fff;
+    border-radius: 10px;
+    padding:20px;
+    color: #444;
+}
+.wrap-heading{
+    text-align: center;
+}
+.wrap-heading h1{
+    font-size: 22px;
+    font-weight: 500;
+}
+.wrap-heading span{
+    color: #999;
+    display: inline-block;
+    margin-top: 10px;
+}
+.wrap-body{
+    padding: 15px;
+}
+/*详情页表格样式*/
+.table-box{
+    width: 100%;
+}
+.table-box table{
+    width: 100%;
+    border: 1px solid #ddd;
+}
+tr{
+
+}
+td{
+    font-size: 16px;
+    padding: 15px;
+    border: 1px solid #d2d2d2;
+}
+.approver{
+    margin-top: 20px;
+    text-align: center;
+}
+.approver h1{
+    font-size: 25px;
+    font-weight: 500;
+}
+.approver p{
+    font-size: 18px;
+    padding: 10px;
+}
+/*inform通知页部分样式*/
+.message{
+    min-height: 300px;
+    font-size: 18px;
+}
+.message h3{
+    font-weight: 500;
+    text-align: center;
+    font-size: 18px;
+}
+.message-content{
+    padding:20px;
+    line-height: 35px;
+}
+.message-content .message-data{
+text-indent: 2em;
+}
+@media screen and (max-width: 980px) {
+    .wrap{
+        width: 100%;
+    }
+    .approver{
+        width: 100%;
+    }
+    .message{
+        font-size: 14px;
+    }
+}

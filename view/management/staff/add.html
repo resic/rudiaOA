@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../../../plugins/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../../css/global.css">
+    <link rel="stylesheet" href="../../../css/ifram-public.css">
+    <link rel="stylesheet" href="../../../css/form.css">
+</head>
+<body>
+<div class="page-content">
+    <div class="page-heading">
+        <h3>员工管理</h3>
+        <ul class="breadcrumb p-left" >
+            <li><a href="">员工管理</a>/</li>
+            <li><a href="" class="active">员工</a></li>
+        </ul>
+        <div class="breadcrumb p-right">
+            <button  class="layui-btn back-btn">返回</button>
+        </div>
+    </div>
+    <div class="page-body">
+        <form class="form-container" id="staff-form" action="">
+            <div class="form-heading"></div>
+            <div class="form-body">
+                <div class="form-group layui-clear">
+                    <label for="">用户名：</label>
+                    <div class="right-control">
+                        <input type="text" name="username" placeholder="请输入用户名">
+                    </div>
+                </div>
+                <div class="form-group layui-clear">
+                    <label for="">密码：</label>
+                    <div class="right-control">
+                        <input type="password" name="pwd" placeholder="请输入密码">
+                    </div>
+                </div>
+                <div class="form-group layui-clear">
+                    <label for="">部门：</label>
+                    <div class="right-control">
+                        <select name="department" id="">
+                            <option value=""></option>
+                            <option value="">开发部</option>
+                            <option value="">运维部</option>
+                            <option value="">人事部</option>
+                            <option value="">综合部</option>
+                            <option value="">系统集成部</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group layui-clear">
+                    <label for="">职位：</label>
+                    <div class="right-control">
+                        <select name="position" id="">
+                            <option value=""></option>
+                            <option value="">总经理</option>
+                            <option value="">经理</option>
+                            <option value="">主管</option>
+                            <option value="">组长</option>
+                            <option value="">员工</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group layui-clear">
+                    <label for="">姓名：</label>
+                    <div class="right-control">
+                        <input type="text" name="name" placeholder="姓名">
+                    </div>
+                </div>
+                <div class="form-group layui-clear">
+                    <label for="">性别：</label>
+                    <div class="right-control">
+                        <label for="" class="sex"> <input type="radio" name="sex">男</label>
+                        <label for="" class="sex"> <input type="radio" name="sex">女</label>
+
+                    </div>
+                </div>
+                <div class="form-group layui-clear">
+                    <label for="">生日：</label>
+                    <div class="right-control">
+                        <input type="text" id="birthday" name="date" placeholder="生日">
+                    </div>
+                </div>
+                <div class="form-group layui-clear">
+                    <label for="">邮箱：</label>
+                    <div class="right-control">
+                        <input type="text" name="email" placeholder="邮箱">
+                    </div>
+                </div>
+                <div class="form-group layui-clear">
+                    <label for="">微信号：</label>
+                    <div class="right-control">
+                        <input type="text" name="weixin" placeholder="微信">
+                    </div>
+                </div>
+                <div class="form-group layui-clear">
+                    <label for="">QQ：</label>
+                    <div class="right-control">
+                        <input type="text" name="QQ" placeholder="QQ">
+                    </div>
+                </div>
+                <div class="form-group layui-clear">
+                    <label for="">手机号：</label>
+                    <div class="right-control">
+                        <input type="text" name="phone" placeholder="手机号">
+                    </div>
+                </div>
+                <div class="form-group layui-clear">
+                    <label for="">住址：</label>
+                    <div class="right-control">
+                        <input type="text" name="address" placeholder="住址">
+                    </div>
+                </div>
+                <div class="form-group layui-clear">
+                    <label for=""></label>
+                    <div class="right-control">
+                        <input type="submit" class="layui-btn" value="提交保存">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    </div>
+<script src="../../../plugins/layui/layui.js"></script>
+<script src="../../../js/jquery-1.12.4.min.js"></script>
+<script src="../../../js/back-btn.js"></script>
+<script>
+    $(function () {
+        layui.use('laydate', function(){
+            var laydate = layui.laydate;
+            var time = {
+                min: '1901-01-01 00:00:01'
+                ,max: '2099-06-16 23:59:59'
+                ,istoday: false
+            };
+            $("#birthday").on("click", function () {
+                time.elem = this;
+                laydate(time);
+            });
+        });
+    });
+</script>
+</body>
+</html>

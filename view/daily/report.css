@@ -1,0 +1,322 @@
+
+.search-text{
+    height:38px;
+    padding:6px 12px;
+    border-radius: 5px;
+    width:160px;
+    border:1px solid #e0dfe3;
+    box-sizing: border-box;
+
+}
+.time-line,.report{
+    float: left;
+    font-family: 'PingFangSC-Light','Hiragino Sans GB',Microsoft YaHei Light,Microsoft YaHei,Arial,sans-serif;
+}
+.time-line{
+    width: 250px;
+}
+.time-line a{
+    color: #777;
+}
+/*年份选择样式*/
+.choose-year{
+    font-size: 30px;
+    width: 160px;
+    height: 50px;
+    border-radius: 25px;
+    border: 1px solid #d3d3d3;
+    background-color: #fff;
+    margin:0 auto 30px;
+    box-sizing: content-box;
+    text-align: center;
+}
+.choose-year:hover{
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.choosen{
+    height: 50px;
+    line-height: 50px;
+    margin-left: 5px;
+}
+.choosen:hover a{
+    color: #51d4cc;
+}
+.choosen i{
+    margin-left:5px;
+    font-size: 20px;
+    vertical-align: 30%;
+}
+/*年份选择下列表样式*/
+.year-list{
+    background-color: #fff;
+    border: 1px solid #d3d3d3;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+}
+.year-list li{
+    height:50px;
+    font-size: 20px;
+    line-height: 50px;
+}
+.year-list li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.year-list li:hover{
+    background-color: #51d4cc;
+    cursor: pointer;
+}
+.year-list li:hover a{
+    color: #fff;
+}
+/*具体月份组样式*/
+.month-week{
+
+}
+/*时间树样式*/
+.month-week .time-tree{
+    width: 240px;
+    padding:5px 5px 0 120px;
+    box-sizing: border-box;
+}
+/*同心圆点*/
+.time-tree .time-circle{
+    position: absolute;
+    cursor: pointer;
+}
+.time-circle{
+    display: inline-block;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    font-size: 0;
+    border: 2px solid #fff;
+    background: #b6b9c4;
+    box-shadow: 0 0 0 1px #dcdfdf;
+}
+/*月份的显示部位*/
+.time-tree .timeTree-head{
+    border-right: 1px solid #b9e374;
+    position: relative;
+    right: 114px;
+    text-align: right;
+    padding-right: 18px;
+    height: 46px;
+}
+.time-tree .timeTree-head.active{
+    border-color: #d0d3de;
+    color: #1880c8;
+}
+.timeTree-head strong{
+    font-size: 20px;
+    margin-right: 3px;
+}
+/*月份的同心圆换成绿色*/
+.timeTree-head .time-circle{
+    background: #85bd2a;
+    box-shadow: 0 0 0 1px #b9d980;
+    right: -6px;
+    top:0;
+}
+.timeTree-head .time-text{
+    display: block;
+    position: relative;
+    top: -10px;
+    cursor: pointer;
+}
+.timeTree-head .time-text strong{
+    position: relative;
+    top:1px;
+}
+/*周列表样式*/
+.timeTree-weekList{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border-left: 1px solid #d0d3de;
+}
+.timeTree-weekList>li{
+    position: relative;
+}
+.timeTree-weekList li a{
+    height: 42px;
+    line-height: 40px;
+    display: block;
+    margin: 0 7px 0 16px;
+    text-align: center;
+    position: relative;
+    top: -21px;
+    color: #666;
+    text-decoration: none;
+    border: 1px solid rgba(0,0,0,0);
+    cursor: pointer;
+}
+.timeTree-weekList li a span{
+    margin: 0 5px;
+}
+.timeTree-weekList li a .arrow-s,
+.timeTree-weekList li a .arrow-b {
+    content: "";
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 15px;
+    left: -6px;
+    border-top: 6px solid rgba(0,0,0,0);
+    border-bottom: 6px solid rgba(0,0,0,0);
+    border-right: 6px solid #73b7e4;
+    display: none;
+}
+.timeTree-weekList li a .arrow-b {
+    left: -5px;
+    top: 16px;
+    border-width: 5px;
+    border-right-color: #fff;
+}
+/*周列表激活状态样式*/
+.timeTree-weekList li.active a{
+    background-color: #fff;
+    border-color: #80c1ed;
+    border-radius: 3px;
+}
+.timeTree-weekList li a:hover,.timeTree-weekList li.active a{
+    color:#1880c8;
+}
+.timeTree-weekList li.active a .arrow-s,
+.timeTree-weekList li.active a .arrow-b {
+    display: block;
+}
+.timeTree-head.active .time-circle,
+.timeTree-weekList li.active .time-circle{
+    background: #1880c8!important;
+    box-shadow: 0 0 0 1px #98ccef!important;
+}
+.timeTree-weekList .time-circle{
+    top:-6px;
+    left:-6px;
+}
+.timeTree-head.annual .time-text{
+    padding-top: 10px;
+}
+.timeTree-head.annual .time-circle{
+    width: 16px;
+    height: 16px;
+    right:-9px;
+}
+.timeTree-head:last-child{
+    border-color:transparent;
+}
+.timeTree-head:last-child.active{
+    border-color:transparent;
+}
+/*右侧详细报告样式*/
+.report{
+    width: 66%;
+}
+.report-box{
+    border: 1px solid #d3d3d3;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+}
+/*头部信息*/
+.report-head{
+    padding:15px 200px 15px 0;
+    margin: 0 20px;
+}
+.head-box{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+}
+.head-box .caption{
+    font-size: 16px;
+    color: #333;
+    margin:0 15px;
+    line-height: 32px;
+}
+#title{
+    font-weight: 700;
+    color: #666;
+}
+/*内容*/
+.report-content{
+    padding:0 15px 10px 15px;
+}
+.report-input{
+    margin: 0 20px 10px 20px;
+}
+.report-input-tit{
+    padding:4px 0 8px;
+    line-height: 24px;
+}
+.report-input-tit i{
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 22px;
+    color: #fff;
+    font-size: 16px;
+}
+.report-text{
+    width: 100%;
+    min-height: 180px;
+    margin: 0;
+    padding: 5px;
+    font-size: 16px;
+    line-height: 20px;
+    resize: none;
+    word-wrap: break-word;
+    vertical-align: middle;
+    color: #555;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.report-text:focus{
+    border-color: #66afe9;
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+}
+.report-panel{
+    margin:20px 10px 20px 20px;
+    background-color: #fff;
+    border: 1px solid #d5d5d5;
+    border-radius: 5px;
+}
+.report-panel .panel-content .read-box,.comment-box{
+    border-bottom: 1px dashed #e2e2e2;
+    margin: 2px 18px;
+    line-height: 34px;
+    color: #999;
+}
+.read-box span,
+.comment-box span{
+    display: inline-block;
+    min-width: 120px;
+    margin: 0 20px;
+}
+.post-box{
+    float: right;
+    padding:0 20px 20px 0;
+}
+.post-box i{
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 22px;
+    color: #555;
+    font-size: 16px;
+    cursor: pointer;
+}

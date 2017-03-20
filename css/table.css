@@ -1,0 +1,65 @@
+/*table*/
+.site-table tbody tr td {text-align: center;}
+.site-table tbody tr td .layui-btn+.layui-btn{margin-left: 0px;}
+.admin-table-page {position: fixed;z-index: 19940201;bottom: 0;width: 100%;background-color: #eee;border-bottom: 1px solid #ddd;left: 0px;}
+.admin-table-page .page{padding-left:20px;}
+.admin-table-page .page .layui-laypage {margin: 6px 0 0 0;}
+.table-hover tbody tr:hover{ background-color: #5FB878; }
+
+/*表格样式*/
+.page-table{
+    margin: 0 auto;
+    width: 100%;
+    background-color: #fff;
+}
+.page-table-head{
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.page-table .page-table-head a{
+    padding:10px;
+    padding-top: 13px;
+    border-radius: 5px;
+}
+.page-table .page-table-head a:hover{
+    color: #fff;
+    background-color: #51d4cc;
+}
+.btn-group{
+    position: relative;
+    width:70px;
+    margin: 0 auto;
+}
+
+/*屏幕适配*/
+/*ipad*/
+@media screen and (max-width: 768px){
+    .page-heading .searchform{
+        min-width:200px;
+    }
+    .searchform select{
+        width: 100px;
+    }
+}
+/*移动设备*/
+@media screen and (max-width: 480px){
+    .page-heading .searchform{
+        display: none;
+    }
+    .page-table-body th:nth-child(2){
+        display: none;
+    }
+    .page-table-body th:nth-child(4){
+        display: none;
+    }
+
+    .page-table-body td:nth-child(2){
+        display: none;
+    }
+    .page-table-body td:nth-child(4){
+        display: none;
+    }
+
+}

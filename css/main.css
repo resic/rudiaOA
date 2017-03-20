@@ -1,0 +1,162 @@
+
+.page-content{
+	margin: 15px;
+}
+.page-content .layui-elem-field {
+	width:100%;
+}
+.page-content .layui-elem-field legend{
+	font-weight:700;
+}
+.page-content .layui-elem-field .tips li{
+	padding:5px 10px;
+	border-bottom: 1px dashed #666;
+}
+.page-content .layui-elem-field .tips span{
+	float: right;
+}
+.page-content .layui-elem-field .tips a:hover{
+	color: #FF5722;
+}
+.page-content .layui-elem-field .tasks a:hover{
+	color: red;
+}
+.page-content .layui-elem-field .tips .more{
+	padding: 10px;
+}
+.page-content .admin-left-box{
+	float: left;
+	width: 48%;
+	margin: 2% 2%;
+}
+.page-content .admin-right-box{
+	float: left;
+	width: 43%;
+	margin: 2% 2%;
+}
+.page-content .layui-elem-field .layui-field-box{
+	width: 90%;
+	margin: 0 auto;
+	max-height: 300px;
+	min-height: 150px;
+}
+
+/*日历样式*/
+#full-clndr {
+	width: 100%;
+	max-width: 600px;
+	background-color: #CCC;
+	border-radius: 10px;
+	overflow: hidden;
+}
+#full-clndr .clndr-controls {
+	color: white;
+	text-align: center;
+	height: 150px;
+	background-color: #009688;
+	line-height: 150px;
+	position: relative;
+	/* 日历标题样式 */
+}
+#full-clndr .clndr-controls .month {
+	width: 100px;
+	height: 50px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left:-50px;
+	margin-top: -25px;
+	line-height: 50px;
+}
+#full-clndr .clndr-controls .month span{
+	display: block;
+	font-size: 30px;
+	line-height: 30px;
+} 
+#full-clndr .clndr-controls .clndr-previous-button {
+	float: left;
+	text-align: left;
+	margin-left: 10%;
+}
+#full-clndr .clndr-controls .clndr-next-button {
+	float: right;
+	text-align: right;
+	margin-right: 10%;
+}
+#full-clndr .clndr-controls .clndr-previous-button,
+#full-clndr .clndr-controls .clndr-next-button {
+	width: 30px;
+	cursor: pointer;
+	font-size: 30px;
+	font-weight: 700;
+}
+#full-clndr .clndr-controls .clndr-previous-button:hover,
+#full-clndr .clndr-controls .clndr-next-button:hover {
+	opacity: 0.5;
+}
+#full-clndr .clndr-grid {
+	width: 100%;
+	border: 1px solid #e2e2e2;
+	box-sizing: border-box;
+}
+#full-clndr .clndr-grid .days-of-the-week {
+	width: 100%;
+	background-color: #fff;
+	color: #000;
+	padding:10px 0;
+}
+#full-clndr .clndr-grid .days-of-the-week .header-day {
+	width: 14.28%;
+	padding: 0px;
+	margin:0px;
+	text-align: center;
+	display: inline-block;    /* 日期头样式 */
+}
+#full-clndr .clndr-grid .days {
+	width: 100%;
+	background-color: #fff;
+}
+#full-clndr .clndr-grid .days .day,
+#full-clndr .clndr-grid .days .empty {
+	width: 8.28%;
+	border-radius: 5px;
+	margin:0 3%;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	color: #000;
+	background-color: #fff;
+	display: inline-block;
+	/* 日期样式 */
+}
+#full-clndr .clndr-grid .days .day.event .day-number,
+#full-clndr .clndr-grid .days .empty.event .day-number {
+	padding-bottom: 4px;
+	border-bottom: 2px solid #3883a3;
+}
+#full-clndr .clndr-grid .days .day.adjacent-month .day-number,
+#full-clndr .clndr-grid .days .empty.adjacent-month .day-number {
+	opacity: 0.3;
+}
+#full-clndr .clndr-grid .days .today {
+	background-color: #51d4cc;
+}
+#full-clndr .clndr-grid .days .day{
+	cursor: pointer;
+}
+#full-clndr .clndr-grid .days .day:hover{
+	background-color: #51d4cc;
+}
+#full-clndr .clndr-grid .days .today:hover{
+	background-color: #009688;
+}
+.focusIn{
+	background-color:#009688 !important;
+}
+@media screen and (max-width: 480px){
+	.page-content .admin-left-box,
+	.page-content .admin-right-box{
+		width: 100%;
+		margin:0;
+	}
+}

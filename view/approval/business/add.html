@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../../../plugins/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../../css/global.css">
+    <link rel="stylesheet" href="../../../css/ifram-public.css">
+    <link rel="stylesheet" href="../../../css/form.css">
+</head>
+<body>
+<div class="page-content">
+    <div class="page-heading">
+        <h3>审批管理</h3>
+        <ul class="breadcrumb p-left" >
+            <li><a href="">审批管理</a>/</li>
+            <li><a href="" class="active">出差</a></li>
+        </ul>
+        <div class="breadcrumb p-right">
+            <button  class="layui-btn back-btn">返回</button>
+        </div>
+    </div>
+    <div class="page-body">
+        <form class="form-container" id="business-form" action="">
+            <div class="form-heading"></div>
+            <div class="form-body">
+                <div class="form-group layui-clear">
+                    <label for="">目的地：</label>
+                    <div class="right-control">
+                        <input type="text" name="address" placeholder="请输入目的地">
+                    </div>
+
+                </div>
+                <div class="form-group layui-clear">
+                    <label for="">行程日期：</label>
+                    <div class="right-control">
+                        <input type="text" name="start" id="start" class="time" placeholder="开始时间">
+                        <span class="to">To</span>
+                        <input type="text" name="end" id="end" class="time" placeholder="结束时间">
+                    </div>
+                </div>
+                <div class="form-group layui-clear">
+                    <label for="">出差天数：</label>
+                    <div class="right-control">
+                        <input type="text" name="day" class="" placeholder="天数">
+                    </div>
+                </div>
+                <div class="form-group layui-clear">
+                    <label for="">出差事由：</label>
+                    <div class="right-control">
+                        <textarea name="" id="" cols="30" rows="10" placeholder="请输入出差详情"></textarea>
+                    </div>
+                </div>
+                <div class="form-group layui-clear">
+                    <label for="">审批人：</label>
+                    <div class="right-control">
+                        <select name="person" class="form-control">
+                            <option>经理</option>
+                            <option>主管</option>
+                            <option>组长</option>
+                            <option>总经理</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group layui-clear">
+                    <label for=""></label>
+                    <div class="right-control">
+                        <input type="submit" class="layui-btn" value="提交">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    </div>
+<script src="../../../plugins/layui/layui.js"></script>
+<script src="../../../js/jquery-1.12.4.min.js"></script>
+<script src="../../../js/back-btn.js"></script>
+<script>
+    $(function () {
+        layui.use('laydate', function(){
+            var laydate = layui.laydate;
+            var start = {
+                min: laydate.now()
+                ,max: '2099-06-16 23:59:59'
+                ,istoday: false
+                ,choose: function(datas){
+                    end.min = datas; //开始日选好后，重置结束日的最小日期
+                    end.start = datas //将结束日的初始值设定为开始日
+                }
+            };
+            var end = {
+                min: laydate.now()
+                ,max: '2099-06-16 23:59:59'
+                ,istoday: false
+                ,choose: function(datas){
+                    start.max = datas; //结束日选好后，重置开始日的最大日期
+                }
+            };
+           $("#start").on("click", function () {
+               start.elem = this;
+               laydate(start);
+           });
+           $("#end").on("click", function () {
+               end.elem = this
+               laydate(end);
+           });
+        });
+    });
+</script>
+</body>
+</html>

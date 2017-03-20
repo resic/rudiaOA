@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../../../plugins/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../../css/global.css">
+    <link rel="stylesheet" href="../../../css/ifram-public.css">
+    <link rel="stylesheet" href="../../../css/form.css">
+</head>
+<body>
+<div class="page-content">
+    <div class="page-heading">
+        <h3>审批管理</h3>
+        <ul class="breadcrumb p-left" >
+            <li><a href="">审批管理</a>/</li>
+            <li><a href="" class="active">报销</a></li>
+        </ul>
+        <div class="breadcrumb p-right">
+            <button  class="layui-btn back-btn">返回</button>
+        </div>
+    </div>
+    <div class="page-body">
+        <form class="form-container" id="expense-form" action="">
+            <div class="form-heading"></div>
+            <div class="form-body">
+                <div class="form-group layui-clear">
+                    <label for="">报销金额：</label>
+                    <div class="right-control">
+                        <input type="text" name="money" placeholder="请输入报销金额">
+                    </div>
+                </div>
+                <div class="form-group layui-clear">
+                    <label for="">报销类型：</label>
+                    <div class="right-control">
+                        <input type="text" name="type"  placeholder="请输入报销类型，例如采购经费，出差经费">
+                    </div>
+                </div>
+                <div class="form-group layui-clear">
+                    <label for="">报销明细：</label>
+                    <div class="right-control">
+                        <textarea name="" id="" cols="30" rows="10" placeholder="报销明细"></textarea>
+                    </div>
+                </div>
+                <div class="form-group layui-clear">
+                    <label for="">审批人：</label>
+                    <div class="right-control">
+                        <select name="person" class="form-control">
+                            <option>经理</option>
+                            <option>主管</option>
+                            <option>组长</option>
+                            <option>总经理</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group layui-clear">
+                    <label for=""></label>
+                    <div class="right-control">
+                        <input type="submit" class="layui-btn" value="提交保存">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    </div>
+<script src="../../../js/jquery-1.12.4.min.js"></script>
+<script src="../../../js/back-btn.js"></script>
+</body>
+</html>

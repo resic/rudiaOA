@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../../../plugins/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../../css/global.css">
+    <link rel="stylesheet" href="../../../css/ifram-public.css">
+    <link rel="stylesheet" href="../../../css/table.css" />
+</head>
+<body>
+<div class="page-content">
+<div class="page-heading">
+    <h3>员工管理</h3>
+    <ul class="breadcrumb p-left" >
+        <li><a href="">员工管理</a>/</li>
+        <li><a href="" class="active">部门</a></li>
+    </ul>
+    <div class="breadcrumb p-right">
+        <form class="searchform" action="" method="get">
+            <select name="department" class="form-control">
+                <option value="" >部门</option>
+                <option value="1" >研发部</option>
+                <option value="2" >运维部</option>
+                <option value="3" >综合部</option>
+                <option value="4" >人事部</option>
+            </select>
+            <button type="submit" class="layui-btn search-btn">搜索</button>
+        </form>
+        <a href="javascript:;" id="jump-btn" class="layui-btn">添加部门</a>
+    </div>
+</div>
+    <div class="page-body">
+         <div class="page-table">
+             <div class="page-table-head">部门 / 总数：9
+                 <span class="p-right">
+                     <a class="gray" href="javascript:;"><i class="layui-icon">&#xe61a;</i></a>
+                 </span>
+             </div>
+             <div class="page-table-body layui-clear">
+                 <table class="site-table table-hover">
+                     <thead>
+                     <tr>
+                         <th>名称</th>
+                         <th>描述</th>
+                         <th>操作</th>
+                     </tr>
+                     </thead>
+                     <tbody>
+                     <tr>
+                         <td>研发部</td>
+                         <td>开发新产品</td>
+                         <td>
+                                 <a href="">查看</a>
+                                <a href="">编辑</a>
+                         </td>
+                     </tr>
+                     <tr>
+                         <td>系统集成部</td>
+                         <td>我也不知道干啥的</td>
+                         <td>
+                                <a href="">查看</a>
+                                <a href="">编辑</a>
+                         </td>
+                     </tr>
+                     <tr>
+                         <td>运维部</td>
+                         <td>维护已有产品，保持运行稳定</td>
+                         <td>
+                                 <a href="">查看</a>
+                                 <a href="">编辑</a>
+                         </td>
+                     </tr>
+                     <tr>
+                         <td>人事部</td>
+                         <td>人员调动</td>
+                         <td>
+                                <a href="">查看</a>
+                                <a href="">编辑</a>
+                         </td>
+                     </tr>
+                     <tr>
+                         <td>综合部</td>
+                         <td>综合事务处理</td>
+                         <td>
+                                <a href="">查看</a>
+                                <a href="">编辑</a>
+                         </td>
+                     </tr>
+
+                     </tbody>
+                 </table>
+                 <div id="pagination" class="p-right"></div>
+             </div>
+
+         </div>
+    </div>
+</div>
+<script src="../../../plugins/layui/layui.js"></script>
+<script src="../../../js/jquery-1.12.4.min.js"></script>
+<script src="../../../js/viewPublic.js"></script>
+</body>
+</html>

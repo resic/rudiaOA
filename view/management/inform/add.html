@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../../../plugins/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../../css/global.css">
+    <link rel="stylesheet" href="../../../css/ifram-public.css">
+    <link rel="stylesheet" href="../../../css/form.css">
+</head>
+<body>
+<div class="page-content">
+    <div class="page-heading">
+        <h3>员工管理</h3>
+        <ul class="breadcrumb p-left" >
+            <li><a href="">员工管理</a>/</li>
+            <li><a href="" class="active">通知公告</a></li>
+        </ul>
+        <div class="breadcrumb p-right">
+            <button  class="layui-btn back-btn">返回</button>
+        </div>
+    </div>
+    <div class="page-body">
+        <form class="form-container" id="inform-form" action="">
+            <div class="form-heading"></div>
+            <div class="form-body">
+                <div class="form-group layui-clear">
+                    <label for="">标题：</label>
+                    <div class="right-control">
+                        <input type="text" name="title" placeholder="标题名称">
+                    </div>
+                </div>
+                <div class="form-group layui-clear">
+                    <label for="">描述：</label>
+                    <div class="right-control">
+                        <input type="text" name="desc" placeholder="简要描述">
+                    </div>
+                </div>
+                <div class="form-group layui-clear">
+                    <label for="">具体细节：</label>
+                    <div class="right-control">
+                        <textarea name="detail" id="" cols="30" rows="10" placeholder="详情"></textarea>
+                    </div>
+                </div>
+                <div class="form-group layui-clear">
+                    <label for="">通知时间：</label>
+                    <div class="right-control">
+                        <input type="text" id="inform-time" name="notifier" placeholder="通知时间">
+                    </div>
+                </div>
+                <div class="form-group layui-clear">
+                    <label for=""></label>
+                    <div class="right-control">
+                        <input type="submit" class="layui-btn" value="提交保存">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    </div>
+<script src="../../../plugins/layui/layui.js"></script>
+<script src="../../../js/jquery-1.12.4.min.js"></script>
+<script src="../../../js/back-btn.js"></script>
+<script>
+    $(function () {
+        layui.use('laydate', function(){
+            var laydate = layui.laydate;
+            var time = {
+                min: '1901-01-01 00:00:01'
+                ,max: '2099-06-16 23:59:59'
+                ,istoday: false
+            };
+            $("#inform-time").on("click", function () {
+                time.elem = this;
+                laydate(time);
+            });
+        });
+    });
+</script>
+</body>
+</html>

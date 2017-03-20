@@ -1,0 +1,103 @@
+
+/*表单样式*/
+input,select,textarea{
+    width: 100%;
+    border-radius: 5px;
+    margin-left: 10px;
+    padding:6px 12px;
+    border: 1px solid rgba(169,169,169,1);
+    box-sizing: border-box;
+}
+input,textarea{
+    font-size: 18px;
+}
+select{
+    display: block;
+    float: left;
+    height: 35px;
+}
+label{
+    width: 220px;
+    text-align: right;
+    font-size: 16px;
+    color: #393D49;
+    float: left;
+    padding-right: 10px;
+    line-height: 35px;
+    min-height: 1px;
+}
+.form-container{
+    background-color: #fff;
+}
+.form-heading{
+    padding:15px;
+    border-bottom: 1px dashed #d2d2d2;
+}
+.form-body{
+    padding:15px;
+}
+.form-group{
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px dashed #e0dfe3;
+}
+.form-group .right-control{
+    width:80%;
+
+    float: left;
+}
+.form-group .to{
+    font-size: 14px;
+    padding:10px;
+
+    background-color: #d2d2d2;
+
+}
+.form-group .time{
+    width: 47%;
+    margin: 0;
+}
+.form-group .time:first-of-type{
+    margin-left: 10px;
+}
+.layui-btn{
+    max-width: 200px;
+}
+.sex{
+    width:50px;
+}
+.sex input{
+    width: 20px;
+}
+@media screen and (max-width: 1024px){
+    label{
+        width: 120px;
+    }
+    .form-group .time{
+        width: 40%;
+        margin: 0;
+    }
+}
+@media screen and (max-width: 768px){
+    label{
+        width: 100px;
+    }
+}
+@media screen and (max-width: 440px){
+    label{
+        display: none;
+    }
+    input,textarea{
+        font-size: 14px;
+    }
+    .form-group .time{
+        width: 40%;
+        margin: 0;
+    }
+}
+@media screen and (max-width: 375px) {
+    .form-group .time{
+        width: 30%;
+        margin: 0;
+    }
+}

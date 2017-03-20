@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../plugins/layui/css/layui.css">
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="../../css/ifram-public.css">
+    <link rel="stylesheet" href="mydaily.css">
+
+</head>
+<body>
+<div class="page-content">
+    <div class="page-heading">
+        <h3>日志管理</h3>
+        <ul class="breadcrumb p-left" >
+            <li><a href="">工作日志</a>/</li>
+            <li><a href="" class="active">日志</a></li>
+        </ul>
+        <div class="breadcrumb p-right ">
+            <form class="searchform" action="" method="get">
+                <input type="text" name="date" class="search-text choose-date" placeholder="请输入搜索日期">
+                <button type="submit" class="layui-btn search-btn">搜索</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="page-body">
+        <div class="log-container">
+            <div class="log-post">
+                <div class="text-box layui-clear">
+                    <form action="" >
+                        <label class="text-title" for="rich-editor">每日工作总结</label>
+                            <textarea name="" id="rich-editor" rows="5" placeholder="请填写今日总结" ></textarea>
+                            <input type="submit" id="push-btn" class="layui-btn " value="提交日志">
+                    </form>
+                </div>
+            </div>
+            <div class="log-show">
+                <div id="20170316" class="layui-clear">
+                    <div class="log-month">2017年03月</div>
+                    <div class="log-list">
+                        <dl class="log-item">
+                           <dt>
+                               <div class="log-date today">
+                                    <div class="day">今天</div>
+                               </div>
+                           </dt>
+                            <div id="" class="log-user">
+                                <div id="" class="log-user-container">
+                                    <dd class="log-box">
+                                            <div class="box-header">
+                                                <p class="theme">用户名</p></div>
+                                            <div class="box-content">
+                                                <p>日志具体内容，动态获取</p>
+                                            </div>
+                                            <div class="box-time">17:35:29</div>
+                                            <div class="box-action layui-hide">
+                                                <span class="layui-icon" title="查看批注查阅情况">&#xe63a;</span>
+                                            </div>
+                                            <div class="log-panel layui-tab layui-tab-brief layui-hide">
+                                                  <ul class="panel-top layui-tab-title">
+                                                      <li class="layui-this">查阅情况</li>
+                                                      <li>批注</li>
+                                                  </ul>
+                                                <div class="panel-content layui-tab-content">
+                                                    <div class="layui-tab-item layui-show">
+                                                        <div class="readinfo">
+                                                            <div class="read-box">
+                                                                <span class="theme">查阅人</span>
+                                                                <span>2017-03-16 10:37:23</span>
+                                                            </div>
+                                                            <div class="read-box">
+                                                                <span class="theme">查阅人2</span>
+                                                                <span>2017-03-16 15:26:36</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="layui-tab-item">
+                                                        <div class="comment">
+                                                            <div class="comment-box">
+                                                                <span class="theme">批注人</span>
+                                                                <span>批注内容</span>
+                                                                <span>2017-03-16 15:37:26</span>
+                                                            </div>
+                                                            <div class="comment-box">
+                                                                <span class="theme">批注人</span>
+                                                                <span>批注内容批注内容批注内容批注内容批注内容批注内容批注内容批注内容批注内容批注内容批注内容批注内容批注内容批注内容批注内容</span>
+                                                                <span>2017-03-16 15:37:26</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    </dd>
+                                </div>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+                <div id="20170315" class="layui-clear">
+                    <div class="log-month layui-hide">2017年03月</div>
+                    <div class="log-list">
+                        <dl class="log-item">
+                            <dt>
+                            <div class="log-date">
+                                <div class="day">15号</div>
+                            </div>
+                            </dt>
+                            <div id="" class="log-user">
+                                <div id="" class="log-user-container">
+                                    <dd class="log-box">
+                                        <div class="box-header">
+                                            <p class="theme">用户名</p></div>
+                                        <div class="box-content">
+                                            <p>日志具体内容，动态获取</p>
+                                        </div>
+                                        <div class="box-time">17:35:29</div>
+                                        <div class="box-action layui-hide">
+                                            <span class="layui-icon" title="查看批注查阅情况">&#xe63a;</span>
+                                        </div>
+                                        <div class="log-panel layui-tab layui-tab-brief layui-hide">
+                                            <ul class="panel-top layui-tab-title">
+                                                <li class="layui-this">查阅情况</li>
+                                                <li>批注</li>
+                                            </ul>
+                                            <div class="panel-content layui-tab-content">
+                                                <div class="layui-tab-item layui-show">
+                                                    <div class="readinfo">
+                                                        <div class="read-box">
+                                                            <span class="theme">查阅人</span>
+                                                            <span>2017-03-16 10:37:23</span>
+                                                        </div>
+                                                        <div class="read-box">
+                                                            <span class="theme">查阅人2</span>
+                                                            <span>2017-03-16 15:26:36</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="layui-tab-item">
+                                                    <div class="comment">
+                                                        <div class="comment-box">
+                                                            <span class="theme">批注人</span>
+                                                            <span>批注内容</span>
+                                                            <span>2017-03-16 15:37:26</span>
+                                                        </div>
+                                                        <div class="comment-box">
+                                                            <span class="theme">批注人</span>
+                                                            <span>批注内容批注内容批注内容批注内容批注内容批注内容批注内容批注内容批注内容批注内容批注内容批注内容批注内容批注内容批注内容</span>
+                                                            <span>2017-03-16 15:37:26</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </dd>
+                                </div>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+                <div id="20170314" class="layui-clear">
+                    <div class="log-month layui-hide">2017年03月</div>
+                    <div class="log-list">
+                        <dl class="log-item">
+                            <dt>
+                            <div class="log-date">
+                                <div class="day">14号</div>
+                            </div>
+                            </dt>
+                            <div id="" class="log-user">
+                                <div id="" class="log-user-container">
+                                    <dd class="log-box">
+                                        <div class="box-header">
+                                            <p class="theme">用户名</p></div>
+                                        <div class="box-content">
+                                            <p>日志具体内容，动态获取</p>
+                                        </div>
+                                        <div class="box-time">17:35:29</div>
+                                        <div class="box-action layui-hide">
+                                            <span class="layui-icon" title="查看批注查阅情况">&#xe63a;</span>
+                                        </div>
+                                        <div class="log-panel layui-tab layui-tab-brief layui-hide">
+                                            <ul class="panel-top layui-tab-title">
+                                                <li class="layui-this">查阅情况</li>
+                                                <li>批注</li>
+                                            </ul>
+                                            <div class="panel-content layui-tab-content">
+                                                <div class="layui-tab-item layui-show">
+                                                    <div class="readinfo">
+                                                        <div class="read-box">
+                                                            <span class="theme">查阅人</span>
+                                                            <span>2017-03-16 10:37:23</span>
+                                                        </div>
+                                                        <div class="read-box">
+                                                            <span class="theme">查阅人2</span>
+                                                            <span>2017-03-16 15:26:36</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="layui-tab-item">
+                                                    <div class="comment">
+                                                        <div class="comment-box">
+                                                            <span class="theme">批注人</span>
+                                                            <span>批注内容</span>
+                                                            <span>2017-03-16 15:37:26</span>
+                                                        </div>
+                                                        <div class="comment-box">
+                                                            <span class="theme">批注人</span>
+                                                            <span>批注内容批注内容批注内容批注内容批注内容批注内容批注内容批注内容批注内容批注内容批注内容批注内容批注内容批注内容批注内容</span>
+                                                            <span>2017-03-16 15:37:26</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </dd>
+                                </div>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+                <div id="20170313" class="layui-clear">
+                    <div class="log-month layui-hide">2017年03月</div>
+                    <div class="log-list">
+                        <dl class="log-item">
+                            <dt>
+                            <div class="log-date">
+                                <div class="day">13号</div>
+                            </div>
+                            </dt>
+                            <div id="" class="log-user">
+                                <div id="" class="log-user-container">
+                                    <dd class="log-box">
+                                        <div class="box-header">
+                                            <p class="theme">用户名</p></div>
+                                        <div class="box-content">
+                                            <p>日志具体内容，动态获取</p>
+                                        </div>
+                                        <div class="box-time">17:35:29</div>
+                                        <div class="box-action layui-hide">
+                                            <span class="layui-icon" title="查看批注查阅情况">&#xe63a;</span>
+                                        </div>
+                                        <div class="log-panel layui-tab layui-tab-brief layui-hide">
+                                            <ul class="panel-top layui-tab-title">
+                                                <li class="layui-this">查阅情况</li>
+                                                <li>批注</li>
+                                            </ul>
+                                            <div class="panel-content layui-tab-content">
+                                                <div class="layui-tab-item layui-show">
+                                                    <div class="readinfo">
+                                                        <div class="read-box">
+                                                            <span class="theme">查阅人</span>
+                                                            <span>2017-03-16 10:37:23</span>
+                                                        </div>
+                                                        <div class="read-box">
+                                                            <span class="theme">查阅人2</span>
+                                                            <span>2017-03-16 15:26:36</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="layui-tab-item">
+                                                    <div class="comment">
+                                                        <div class="comment-box">
+                                                            <span class="theme">批注人</span>
+                                                            <span>批注内容</span>
+                                                            <span>2017-03-16 15:37:26</span>
+                                                        </div>
+                                                        <div class="comment-box">
+                                                            <span class="theme">批注人</span>
+                                                            <span>批注内容批注内容批注内容批注内容批注内容批注内容批注内容批注内容批注内容批注内容批注内容批注内容批注内容批注内容批注内容</span>
+                                                            <span>2017-03-16 15:37:26</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </dd>
+                                </div>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../../plugins/layui/layui.js"></script>
+<script src="./mydaily.js"></script>
+</body>
+</html>

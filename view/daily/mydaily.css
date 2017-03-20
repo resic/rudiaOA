@@ -1,0 +1,201 @@
+
+.search-text{
+    height:38px;
+    padding:6px 12px;
+    border-radius: 5px;
+    width:160px;
+    border:1px solid #e0dfe3;
+    box-sizing: border-box;
+
+}
+.log-container{
+    width: 76.66%;
+}
+.choose-date{
+    border: 1px solid #d3d3d3;
+    padding:5px 10px;
+}
+/*填写日志部分*/
+.log-post{
+margin-top: 10px;
+}
+.log-post .text-box{
+    border-radius: 10px;
+    background-color: #fff;
+    transition: all 1s;
+    padding:10px 0;
+    overflow: hidden;
+    position: relative;
+}
+.log-post textarea{
+    width: 100%;
+    font-size: 16px;
+    padding:10px 30px;
+    box-sizing: border-box;
+    border: none;
+
+}
+.text-box #push-btn{
+    display: none;
+    transition: all 1s 1s;
+    position: absolute;
+    right: 20px;
+    bottom:10px;
+}
+.text-box .text-title{
+    font-size: 22px;
+    padding-left: 20px;
+    line-height: 50px;
+    opacity: 0;
+    position: absolute;
+    top:0;
+    transition: all 0.5s ;
+}
+.text-box.focus {
+    transition: all 1s;
+    padding: 50px 0;
+}
+.text-box.focus .text-title{
+    transition: all 1s 0.5s;
+    opacity: 1;
+}
+.text-box.focus textarea{
+    border-top: 1px dashed #d3d3d3;
+    border-bottom: 1px dashed #d3d3d3;
+}
+.text-box.focus #push-btn{
+    transition: all 1s;
+    display: block;
+}
+
+/*所有日志展示部分样式*/
+.log-show{
+    padding-left:40px;
+    margin:20px 0 0 25px;
+    border-left: 1px solid #d3d3d3;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    position: relative;
+}
+.log-show div::before{
+    display: table;
+    content: "";
+}
+.log-show::after{
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    left: -13px;
+    height: 23px;
+    width: 23px;
+    border: 2px solid #d3d3d3;
+    background: #d3d3d3;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px #eee;
+}
+/*月份显示*/
+.log-month{
+    position: relative;
+    padding-left: 10px;
+    color: #666;
+    margin-bottom: 30px;
+}
+.log-month:before{
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -52px;
+    height: 23px;
+    width: 23px;
+    border: 2px solid #d3d3d3;
+    background: #eee;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px #eee;
+}
+/*日志部分*/
+.log-list{
+
+}
+.log-item{
+    margin-bottom: 20px;
+    position: relative;
+}
+/*日志导航时间样式*/
+.log-item dt{
+    display: block;
+    background: #eee;
+    position: absolute;
+    left: -66px;
+    top: 3px;
+    height: 50px;
+    width: 50px;
+    border: 2px solid #fff;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 0 3px rgba(0,0,0,0.15);
+}
+.log-item .log-date{
+    height: 100%;
+    width: 100%;
+    line-height: 46px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    background-color: #2dc3e8;
+}
+.log-item .today{
+    background-color: #47a447;;
+}
+/*日志主体*/
+.log-item .log-box{
+    background: #fff;
+    box-shadow: 0 0 3px rgba(0,0,0,0.15);
+    border-radius: 5px;
+    padding: 15px;
+}
+.log-box .box-header{
+    margin-bottom: 5px;
+}
+.log-box .box-content{
+
+}
+.log-box .box-time{
+    color: #999;
+    font-size: 12px;
+    margin-top: 5px;
+}
+.log-box .box-action{
+    text-align: right;
+    margin: -38px 30px 0 0;
+    height: 38px;
+}
+.log-box .box-action span{
+    font-size:26px;
+    cursor: pointer;
+}
+/*批注查阅*/
+.log-box .log-panel{
+    margin-top: 10px;
+    background-color: #fff;
+    border: 1px solid #d5d5d5;
+    border-radius: 5px;
+}
+.log-panel .panel-content .read-box,.comment-box{
+    border-bottom: 1px dashed #e2e2e2;
+    margin: 2px 18px;
+    line-height: 34px;
+    color: #999;
+}
+.read-box span,
+.comment-box span{
+    display: inline-block;
+    min-width: 120px;
+    margin: 0 20px;
+}
+/*响应式*/
+@media screen and (max-width: 980px){
+    .log-container{
+        width:100%;
+    }
+}

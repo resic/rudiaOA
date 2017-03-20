@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>睿达智能-OA-用户登录</title>
+	<link rel="stylesheet" type="text/css" href="./css/login.css"/>
+	<link rel="icon" href="./favicon.ico">
+	<script src="./js/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./js/login.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+
+	<div class="event" id="login_box" >
+
+		<div class="login">
+
+			<div class="title">
+
+				<img src="./images/logo2.png" alt="睿达智能">
+
+			</div>
+			<form action="./login.php" method="post">
+
+				<input type="text" name="username" id="username"  placeholder="请输入用户名"/>
+
+				<input type="text" name="pwd" id="pwd"  placeholder="请输入密码"/>
+
+				<input type="submit" class='btn' value='登录'/>
+
+				<p class='tip1' style='display: none'>* 用户名不能为空 </p>
+
+				<p class='tip2' style='display: none'>* 密码不能为空 </p>
+
+			</form>
+
+		</div>
+
+	</div>
+
+	<div align="center" class="footer">
+
+		<span>2017 &copy; 河南睿达智能科技有限公司</span>
+
+	</div>
+
+	<div class="bg_color" id="bg_filter"></div>
+
+
+</body>
+</html>

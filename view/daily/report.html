@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../plugins/layui/css/layui.css">
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="../../css/ifram-public.css">
+    <link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="report.css">
+
+</head>
+<body>
+<div class="page-content">
+    <div class="page-heading">
+        <h3>日志管理</h3>
+        <ul class="breadcrumb p-left" >
+            <li><a href="">工作日志</a>/</li>
+            <li><a href="" class="active">周报</a></li>
+        </ul>
+        <div class="breadcrumb p-right ">
+        </div>
+    </div>
+
+    <div class="page-body layui-clear">
+        <div class="time-line">
+            <div class="time-line-box">
+                <div class="choose-year">
+                    <div class="choosen">
+                        <a><span>2017</span><i class="fa fa-caret-down"></i></a>
+                    </div>
+                    <ul class="year-list layui-hide">
+                        <li><a>2015</a></li>
+                        <li><a>2016</a></li>
+                        <li><a>2017</a></li>
+                    </ul>
+                </div>
+                <div class="month-week">
+                      <div class="tree-box">
+                          <div class="time-tree">
+                              <!--timeTree-month为一个月份的所有周的组,以后可只保留一个改为模板-->
+                              <div class="timeTree-head annual">
+                                      <span class="time-text">
+                                      <span>2017</span>年度
+                                      </span>
+                                      <span>
+                                          <em class="time-circle"></em>
+                                      </span>
+                              </div>
+                              <div class="timeTree-month">
+                                  <div class="timeTree-head month">
+                                      <span class="time-text">
+                                          <strong>1</strong>月
+                                      </span>
+                                      <span>
+                                          <em class="time-circle"></em>
+                                      </span>
+                                  </div>
+                                  <ul class="timeTree-weekList layui-hide">
+                                      <li class="c-week">
+                                          <a class="router">第<span>1</span>周<em class="arrow-s"></em><em class="arrow-b"></em></a>
+                                          <em class="time-circle"></em>
+                                      </li>
+                                      <li class="c-week">
+                                          <a class="router">第<span>2</span>周<em class="arrow-s"></em><em class="arrow-b"></em></a>
+                                          <em class="time-circle"></em>
+                                      </li>
+                                      <li class="c-week">
+                                          <a class="router">第<span>3</span>周<em class="arrow-s"></em><em class="arrow-b"></em></a>
+                                          <em class="time-circle"></em>
+                                      </li>
+                                      <li class="c-week">
+                                          <a class="router">第<span>4</span>周<em class="arrow-s"></em><em class="arrow-b"></em></a>
+                                          <em class="time-circle"></em>
+                                      </li>
+                                      <li class="c-week">
+                                          <a class="router">第<span>5</span>周<em class="arrow-s"></em><em class="arrow-b"></em></a>
+                                          <em class="time-circle"></em>
+                                      </li>
+                                  </ul>
+                              </div>
+                              <div class="timeTree-month">
+                                  <div class="timeTree-head month">
+                                      <span class="time-text">
+                                          <strong>2</strong>月
+                                      </span>
+                                      <span>
+                                          <em class="time-circle"></em>
+                                      </span>
+                                  </div>
+                                  <ul class="timeTree-weekList layui-hide">
+                                      <li class="c-week">
+                                          <a class="router">第<span>6</span>周<em class="arrow-s"></em><em class="arrow-b"></em></a>
+                                          <em class="time-circle"></em>
+                                      </li>
+                                      <li class="c-week">
+                                          <a class="router">第<span>7</span>周<em class="arrow-s"></em><em class="arrow-b"></em></a>
+                                          <em class="time-circle"></em>
+                                      </li>
+                                      <li class="c-week">
+                                          <a class="router">第<span>8</span>周<em class="arrow-s"></em><em class="arrow-b"></em></a>
+                                          <em class="time-circle"></em>
+                                      </li>
+                                      <li class="c-week">
+                                          <a class="router">第<span>9</span>周<em class="arrow-s"></em><em class="arrow-b"></em></a>
+                                          <em class="time-circle"></em>
+                                      </li>
+                                  </ul>
+                              </div>
+                              <div class="timeTree-month">
+                                  <div class="timeTree-head month">
+                                      <span class="time-text">
+                                          <strong>3</strong>月
+                                      </span>
+                                      <span>
+                                          <em class="time-circle"></em>
+                                      </span>
+                                  </div>
+                                  <ul class="timeTree-weekList layui-hide">
+                                      <li class="c-week">
+                                          <a class="router">第<span>10</span>周<em class="arrow-s"></em><em class="arrow-b"></em></a>
+                                          <em class="time-circle"></em>
+                                      </li>
+                                      <li class="c-week">
+                                          <a class="router">第<span>11</span>周<em class="arrow-s"></em><em class="arrow-b"></em></a>
+                                          <em class="time-circle"></em>
+                                      </li>
+                                      <li class="c-week">
+                                          <a class="router">第<span>12</span>周<em class="arrow-s"></em><em class="arrow-b"></em></a>
+                                          <em class="time-circle"></em>
+                                      </li>
+                                      <li class="c-week">
+                                          <a class="router">第<span>13</span>周<em class="arrow-s"></em><em class="arrow-b"></em></a>
+                                          <em class="time-circle"></em>
+                                      </li>
+                                  </ul>
+                              </div>
+                              <div class="timeTree-month">
+                                  <div class="timeTree-head month">
+                                      <span class="time-text">
+                                          <strong>4</strong>月
+                                      </span>
+                                      <span>
+                                          <em class="time-circle"></em>
+                                      </span>
+                                  </div>
+                                  <ul class="timeTree-weekList layui-hide">
+                                      <li class="c-week">
+                                          <a class="router">第<span>14</span>周<em class="arrow-s"></em><em class="arrow-b"></em></a>
+                                          <em class="time-circle"></em>
+                                      </li>
+                                      <li class="c-week">
+                                          <a class="router">第<span>15</span>周<em class="arrow-s"></em><em class="arrow-b"></em></a>
+                                          <em class="time-circle"></em>
+                                      </li>
+                                      <li class="c-week">
+                                          <a class="router">第<span>16</span>周<em class="arrow-s"></em><em class="arrow-b"></em></a>
+                                          <em class="time-circle"></em>
+                                      </li>
+                                      <li class="c-week">
+                                          <a class="router">第<span>17</span>周<em class="arrow-s"></em><em class="arrow-b"></em></a>
+                                          <em class="time-circle"></em>
+                                      </li>
+                                  </ul>
+                              </div>
+                              <div class="timeTree-month">
+                                  <div class="timeTree-head month">
+                                      <span class="time-text">
+                                          <strong>5</strong>月
+                                      </span>
+                                      <span>
+                                          <em class="time-circle"></em>
+                                      </span>
+                                  </div>
+                                  <ul class="timeTree-weekList layui-hide">
+                                      <li class="c-week">
+                                          <a class="router">第<span>18</span>周<em class="arrow-s"></em><em class="arrow-b"></em></a>
+                                          <em class="time-circle"></em>
+                                      </li>
+                                      <li class="c-week">
+                                          <a class="router">第<span>19</span>周<em class="arrow-s"></em><em class="arrow-b"></em></a>
+                                          <em class="time-circle"></em>
+                                      </li>
+                                      <li class="c-week">
+                                          <a class="router">第<span>20</span>周<em class="arrow-s"></em><em class="arrow-b"></em></a>
+                                          <em class="time-circle"></em>
+                                      </li>
+                                      <li class="c-week">
+                                          <a class="router">第<span>21</span>周<em class="arrow-s"></em><em class="arrow-b"></em></a>
+                                          <em class="time-circle"></em>
+                                      </li>
+                                      <li class="c-week">
+                                          <a class="router">第<span>22</span>周<em class="arrow-s"></em><em class="arrow-b"></em></a>
+                                          <em class="time-circle"></em>
+                                      </li>
+                                  </ul>
+                              </div>
+                              <div class="timeTree-month">
+                                  <div class="timeTree-head month">
+                                      <span class="time-text">
+                                          <strong>6</strong>月
+                                      </span>
+                                      <span>
+                                          <em class="time-circle"></em>
+                                      </span>
+                                  </div>
+                                  <ul class="timeTree-weekList layui-hide">
+                                      <li class="c-week">
+                                          <a class="router">第<span>23</span>周<em class="arrow-s"></em><em class="arrow-b"></em></a>
+                                          <em class="time-circle"></em>
+                                      </li>
+                                      <li class="c-week">
+                                          <a class="router">第<span>24</span>周<em class="arrow-s"></em><em class="arrow-b"></em></a>
+                                          <em class="time-circle"></em>
+                                      </li>
+                                      <li class="c-week">
+                                          <a class="router">第<span>25</span>周<em class="arrow-s"></em><em class="arrow-b"></em></a>
+                                          <em class="time-circle"></em>
+                                      </li>
+                                      <li class="c-week">
+                                          <a class="router">第<span>26</span>周<em class="arrow-s"></em><em class="arrow-b"></em></a>
+                                          <em class="time-circle"></em>
+                                      </li>
+                                  </ul>
+                              </div>
+                              <div class="timeTree-month">
+                                  <div class="timeTree-head month">
+                                      <span class="time-text">
+                                          <strong>7</strong>月
+                                      </span>
+                                      <span>
+                                          <em class="time-circle"></em>
+                                      </span>
+                                  </div>
+                                  <ul class="timeTree-weekList layui-hide">
+                                      <li class="c-week">
+                                          <a class="router">第<span>27</span>周<em class="arrow-s"></em><em class="arrow-b"></em></a>
+                                          <em class="time-circle"></em>
+                                      </li>
+                                      <li class="c-week">
+                                          <a class="router">第<span>28</span>周<em class="arrow-s"></em><em class="arrow-b"></em></a>
+                                          <em class="time-circle"></em>
+                                      </li>
+                                      <li class="c-week">
+                                          <a class="router">第<span>29</span>周<em class="arrow-s"></em><em class="arrow-b"></em></a>
+                                          <em class="time-circle"></em>
+                                      </li>
+                                      <li class="c-week">
+                                          <a class="router">第<span>30</span>周<em class="arrow-s"></em><em class="arrow-b"></em></a>
+                                          <em class="time-circle"></em>
+                                      </li>
+                                      <li class="c-week">
+                                          <a class="router">第<span>31</span>周<em class="arrow-s"></em><em class="arrow-b"></em></a>
+                                          <em class="time-circle"></em>
+                                      </li>
+                                  </ul>
+                              </div>
+                              <div class="timeTree-month">
+                                  <div class="timeTree-head month">
+                                      <span class="time-text">
+                                          <strong>8</strong>月
+                                      </span>
+                                      <span>
+                                          <em class="time-circle"></em>
+                                      </span>
+                                  </div>
+                                  <ul class="timeTree-weekList layui-hide">
+                                      <li class="c-week">
+                                          <a class="router">第<span>32</span>周<em class="arrow-s"></em><em class="arrow-b"></em></a>
+                                          <em class="time-circle"></em>
+                                      </li>
+                                      <li class="c-week">
+                                          <a class="router">第<span>33</span>周<em class="arrow-s"></em><em class="arrow-b"></em></a>
+                                          <em class="time-circle"></em>
+                                      </li>
+                                      <li class="c-week">
+                                          <a class="router">第<span>34</span>周<em class="arrow-s"></em><em class="arrow-b"></em></a>
+                                          <em class="time-circle"></em>
+                                      </li>
+                                      <li class="c-week">
+                                          <a class="router">第<span>35</span>周<em class="arrow-s"></em><em class="arrow-b"></em></a>
+                                          <em class="time-circle"></em>
+                                      </li>
+                                  </ul>
+                              </div>
+                              <div class="timeTree-month">
+                                  <div class="timeTree-head month">
+                                      <span class="time-text">
+                                          <strong>9</strong>月
+                                      </span>
+                                      <span>
+                                          <em class="time-circle"></em>
+                                      </span>
+                                  </div>
+                                  <ul class="timeTree-weekList layui-hide">
+                                      <li class="c-week">
+                                          <a class="router">第<span>36</span>周<em class="arrow-s"></em><em class="arrow-b"></em></a>
+                                          <em class="time-circle"></em>
+                                      </li>
+                                      <li class="c-week">
+                                          <a class="router">第<span>37</span>周<em class="arrow-s"></em><em class="arrow-b"></em></a>
+                                          <em class="time-circle"></em>
+                                      </li>
+                                      <li class="c-week">
+                                          <a class="router">第<span>38</span>周<em class="arrow-s"></em><em class="arrow-b"></em></a>
+                                          <em class="time-circle"></em>
+                                      </li>
+                                      <li class="c-week">
+                                          <a class="router">第<span>39</span>周<em class="arrow-s"></em><em class="arrow-b"></em></a>
+                                          <em class="time-circle"></em>
+                                      </li>
+                                  </ul>
+                              </div>
+                              <div class="timeTree-month">
+                                  <div class="timeTree-head month">
+                                      <span class="time-text">
+                                          <strong>10</strong>月
+                                      </span>
+                                      <span>
+                                          <em class="time-circle"></em>
+                                      </span>
+                                  </div>
+                                  <ul class="timeTree-weekList layui-hide">
+                                      <li class="c-week">
+                                          <a class="router">第<span>40</span>周<em class="arrow-s"></em><em class="arrow-b"></em></a>
+                                          <em class="time-circle"></em>
+                                      </li>
+                                      <li class="c-week">
+                                          <a class="router">第<span>41</span>周<em class="arrow-s"></em><em class="arrow-b"></em></a>
+                                          <em class="time-circle"></em>
+                                      </li>
+                                      <li class="c-week">
+                                          <a class="router">第<span>42</span>周<em class="arrow-s"></em><em class="arrow-b"></em></a>
+                                          <em class="time-circle"></em>
+                                      </li>
+                                      <li class="c-week">
+                                          <a class="router">第<span>43</span>周<em class="arrow-s"></em><em class="arrow-b"></em></a>
+                                          <em class="time-circle"></em>
+                                      </li>
+                                      <li class="c-week">
+                                          <a class="router">第<span>44</span>周<em class="arrow-s"></em><em class="arrow-b"></em></a>
+                                          <em class="time-circle"></em>
+                                      </li>
+                                  </ul>
+                              </div>
+                              <div class="timeTree-month">
+                                  <div class="timeTree-head month">
+                                      <span class="time-text">
+                                          <strong>11</strong>月
+                                      </span>
+                                      <span>
+                                          <em class="time-circle"></em>
+                                      </span>
+                                  </div>
+                                  <ul class="timeTree-weekList layui-hide">
+                                      <li class="c-week">
+                                          <a class="router">第<span>45</span>周<em class="arrow-s"></em><em class="arrow-b"></em></a>
+                                          <em class="time-circle"></em>
+                                      </li>
+                                      <li class="c-week">
+                                          <a class="router">第<span>46</span>周<em class="arrow-s"></em><em class="arrow-b"></em></a>
+                                          <em class="time-circle"></em>
+                                      </li>
+                                      <li class="c-week">
+                                          <a class="router">第<span>47</span>周<em class="arrow-s"></em><em class="arrow-b"></em></a>
+                                          <em class="time-circle"></em>
+                                      </li>
+                                      <li class="c-week">
+                                          <a class="router">第<span>48</span>周<em class="arrow-s"></em><em class="arrow-b"></em></a>
+                                          <em class="time-circle"></em>
+                                      </li>
+                                  </ul>
+                              </div>
+                              <div class="timeTree-month">
+                                  <div class="timeTree-head month">
+                                      <span class="time-text">
+                                          <strong>12</strong>月
+                                      </span>
+                                      <span>
+                                          <em class="time-circle"></em>
+                                      </span>
+                                  </div>
+                                  <ul class="timeTree-weekList layui-hide">
+                                      <li class="c-week">
+                                          <a class="router">第<span>49</span>周<em class="arrow-s"></em><em class="arrow-b"></em></a>
+                                          <em class="time-circle"></em>
+                                      </li>
+                                      <li class="c-week">
+                                          <a class="router">第<span>50</span>周<em class="arrow-s"></em><em class="arrow-b"></em></a>
+                                          <em class="time-circle"></em>
+                                      </li>
+                                      <li class="c-week">
+                                          <a class="router">第<span>51</span>周<em class="arrow-s"></em><em class="arrow-b"></em></a>
+                                          <em class="time-circle"></em>
+                                      </li>
+                                      <li class="c-week">
+                                          <a class="router">第<span>52</span>周<em class="arrow-s"></em><em class="arrow-b"></em></a>
+                                          <em class="time-circle"></em>
+                                      </li>
+                                  </ul>
+                              </div>
+                              <div class="timeTree-head annual">
+                                      <span>
+                                          <em class="time-circle"></em>
+                                      </span>
+                              </div>
+                          </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+        <div class="report">
+            <div class="report-box">
+                 <div class="report-head layui-clear">
+                     <div class="head-box title" title="苏默的第1周周报 [12-26~01-01] 2017-03-15 17:53:17">
+                         <span id="title" class="caption">苏默的第1周周报</span>
+                         <span id="weekDay" class="caption"> [ <i>12-26~01-01</i> ] </span>
+                         <span id="addTime" class="caption">2017-03-15 17:53:17</span>
+                     </div>
+                 </div>
+                 <div class="report-content">
+                     <div class="report-input">
+                         <div class="report-input-tit">
+                             <i class="fa fa-calendar-check-o blue"></i>
+                             <span>本周工作总结</span>
+                         </div>
+                         <textarea id="summary" class="report-text" placeholder="此处填写本周总结"></textarea>
+                     </div>
+                     <div class="report-input">
+                         <div class="report-input-tit">
+                             <i class="fa fa-pencil yellow"></i>
+                             <span>下周工作计划</span>
+                         </div>
+                         <textarea id="plan" class="report-text" placeholder="此处填写下周计划"></textarea>
+                     </div>
+                     <div class="report-panel layui-tab layui-tab-brief">
+                         <ul class="panel-top layui-tab-title">
+                             <li class="layui-this">查阅情况</li>
+                             <li>批注</li>
+                         </ul>
+                         <div class="panel-content layui-tab-content">
+                             <div class="layui-tab-item layui-show">
+                                 <div class="readinfo">
+                                     <div class="read-box">
+                                         <span class="theme">查阅人</span>
+                                         <span>2017-03-16 10:37:23</span>
+                                     </div>
+                                     <div class="read-box">
+                                         <span class="theme">查阅人2</span>
+                                         <span>2017-03-16 15:26:36</span>
+                                     </div>
+                                 </div>
+                             </div>
+                             <div class="layui-tab-item">
+                                 <div class="comment">
+                                     <div class="comment-box">
+                                         <span class="theme">批注人</span>
+                                         <span>批注内容</span>
+                                         <span>2017-03-16 15:37:26</span>
+                                     </div>
+                                     <div class="comment-box">
+                                         <span class="theme">批注人</span>
+                                         <span>批注内容批注内容</span>
+                                         <span>2017-03-16 15:37:26</span>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="post-box layui-hide">
+                         <button id="post-btn" class="layui-btn">提交</button>
+                         <i class="fa fa-question-circle-o" title="周报提交之后不可更改，请仔细检查，确定无误后提交"></i>
+                     </div>
+                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../../plugins/layui/layui.js"></script>
+<script src="./report.js"></script>
+</body>
+</html>
