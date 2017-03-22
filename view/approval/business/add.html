@@ -21,34 +21,34 @@
         </div>
     </div>
     <div class="page-body">
-        <form class="form-container" id="business-form" action="">
+        <form class="form-container layui-form" id="business-form" action="">
             <div class="form-heading"></div>
             <div class="form-body">
                 <div class="form-group layui-clear">
                     <label for="">目的地：</label>
                     <div class="right-control">
-                        <input type="text" name="address" placeholder="请输入目的地">
+                        <input type="text" name="address" lay-verify="required|chinese" placeholder="请输入目的地">
                     </div>
 
                 </div>
                 <div class="form-group layui-clear">
                     <label for="">行程日期：</label>
                     <div class="right-control">
-                        <input type="text" name="start" id="start" class="time" placeholder="开始时间">
+                        <input type="text" name="start" id="start" class="time" lay-verify="required" placeholder="开始时间">
                         <span class="to">To</span>
-                        <input type="text" name="end" id="end" class="time" placeholder="结束时间">
+                        <input type="text" name="end" id="end" class="time" lay-verify="required" placeholder="结束时间">
                     </div>
                 </div>
                 <div class="form-group layui-clear">
                     <label for="">出差天数：</label>
                     <div class="right-control">
-                        <input type="text" name="day" class="" placeholder="天数">
+                        <input type="text" name="day" class="" lay-verify="required|number" placeholder="天数">
                     </div>
                 </div>
                 <div class="form-group layui-clear">
                     <label for="">出差事由：</label>
                     <div class="right-control">
-                        <textarea name="" id="" cols="30" rows="10" placeholder="请输入出差详情"></textarea>
+                        <textarea name="" id="" cols="30" rows="10" lay-verify="requirde" placeholder="请输入出差详情"></textarea>
                     </div>
                 </div>
                 <div class="form-group layui-clear">
@@ -65,7 +65,7 @@
                 <div class="form-group layui-clear">
                     <label for=""></label>
                     <div class="right-control">
-                        <input type="submit" class="layui-btn" value="提交">
+                        <input type="submit" class="layui-btn" lay-submit value="提交">
                     </div>
                 </div>
             </div>
@@ -73,12 +73,12 @@
     </div>
     </div>
 <script src="../../../plugins/layui/layui.js"></script>
-<script src="../../../js/jquery-1.12.4.min.js"></script>
+<script src="../../../js/form-verify.js"></script>
 <script src="../../../js/back-btn.js"></script>
 <script>
-    $(function () {
-        layui.use('laydate', function(){
+        layui.use(["laydate","jquery"], function(){
             var laydate = layui.laydate;
+            var $=layui.jquery;
             var start = {
                 min: laydate.now()
                 ,max: '2099-06-16 23:59:59'
@@ -105,7 +105,6 @@
                laydate(end);
            });
         });
-    });
 </script>
 </body>
 </html>

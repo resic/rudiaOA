@@ -1,0 +1,137 @@
+.tree-menu{
+    width: 220px;
+    position: absolute;
+    left:20px;
+}
+.report{
+    float: left;
+    font-family: 'PingFangSC-Light','Hiragino Sans GB',Microsoft YaHei Light,Microsoft YaHei,Arial,sans-serif;
+}
+.search-text{
+    height:38px;
+    padding:6px 12px;
+    border-radius: 5px;
+    width:160px;
+    border:1px solid #e0dfe3;
+    box-sizing: border-box;
+
+}
+.choose-date{
+    border: 1px solid #d3d3d3;
+    padding:5px 10px;
+}
+/*右侧详细报告样式*/
+.report{
+    width: 66%;
+    margin-left: 240px;
+}
+.report-box{
+    border: 1px solid #d3d3d3;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+}
+/*头部信息*/
+.report-head{
+    padding:15px 200px 15px 0;
+    margin: 0 20px;
+}
+.head-box{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+}
+.head-box .caption{
+    font-size: 16px;
+    color: #333;
+    margin:0 15px;
+    line-height: 32px;
+}
+#title{
+    font-weight: 700;
+    color: #666;
+}
+/*内容*/
+.report-content{
+    padding:0 15px 10px 15px;
+}
+.report-input{
+    margin: 0 20px 10px 20px;
+}
+.report-input-tit{
+    padding:4px 0 8px;
+    line-height: 24px;
+}
+.report-input-tit i{
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 22px;
+    color: #fff;
+    font-size: 16px;
+}
+.report-text{
+    width: 100%;
+    min-height: 220px;
+    margin: 0;
+    padding: 5px;
+    font-size: 16px;
+    line-height: 20px;
+    resize: none;
+    word-wrap: break-word;
+    vertical-align: middle;
+    color: #555;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.report-text:focus{
+    border-color: #66afe9;
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+}
+.report-panel{
+    margin:20px 10px 20px 20px;
+    background-color: #fff;
+    border: 1px solid #d5d5d5;
+    border-radius: 5px;
+}
+.report-panel .panel-content .read-box,.comment-box{
+    border-bottom: 1px dashed #e2e2e2;
+    margin: 2px 18px;
+    line-height: 34px;
+    color: #999;
+}
+.read-box span,
+.comment-box span{
+    display: inline-block;
+    min-width: 120px;
+    margin: 0 20px;
+}
+.comment-box .comment-write{
+    width: 90%;
+    margin: 0 auto;
+}
+.comment-box textarea{
+    width: 100%;
+    resize: none;
+    margin-top:20px;
+    display: block;
+    min-height: 120px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #d3d3d3;
+    padding:20px;
+    box-sizing: border-box;
+}
+.comment-box textarea:focus{
+    border-color:#66afe9 ;
+    box-shadow: 0 0 5px 2px rgba(102,175,233,.6);
+}
+.comment-box #comment-post{
+    margin: 10px 0;
+}

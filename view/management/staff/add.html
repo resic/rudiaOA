@@ -21,31 +21,31 @@
         </div>
     </div>
     <div class="page-body">
-        <form class="form-container" id="staff-form" action="">
+        <form class="form-container layui-form" id="staff-form" action="">
             <div class="form-heading"></div>
             <div class="form-body">
                 <div class="form-group layui-clear">
                     <label for="">用户名：</label>
                     <div class="right-control">
-                        <input type="text" name="username" placeholder="请输入用户名">
+                        <input type="text" name="username" lay-verify="required|username" placeholder="请输入用户名">
                     </div>
                 </div>
                 <div class="form-group layui-clear">
                     <label for="">密码：</label>
                     <div class="right-control">
-                        <input type="password" name="pwd" placeholder="请输入密码">
+                        <input type="password" name="pwd" lay-verify="pwd" placeholder="请输入密码">
                     </div>
                 </div>
                 <div class="form-group layui-clear">
                     <label for="">部门：</label>
                     <div class="right-control">
                         <select name="department" id="">
-                            <option value=""></option>
-                            <option value="">开发部</option>
-                            <option value="">运维部</option>
-                            <option value="">人事部</option>
-                            <option value="">综合部</option>
-                            <option value="">系统集成部</option>
+                                <option value="">请选择部门</option>
+                                <option value="1">开发部</option>
+                                <option value="2">运维部</option>
+                                <option value="3">人事部</option>
+                                <option value="4">综合部</option>
+                                <option value="5">系统集成部</option>
                         </select>
                     </div>
                 </div>
@@ -53,69 +53,69 @@
                     <label for="">职位：</label>
                     <div class="right-control">
                         <select name="position" id="">
-                            <option value=""></option>
-                            <option value="">总经理</option>
-                            <option value="">经理</option>
-                            <option value="">主管</option>
-                            <option value="">组长</option>
-                            <option value="">员工</option>
+                                <option value="">请选择职位</option>
+                                <option value="1">总经理</option>
+                                <option value="2">经理</option>
+                                <option value="3">主管</option>
+                                <option value="4">组长</option>
+                                <option value="5">员工</option>
                         </select>
                     </div>
                 </div>
                 <div class="form-group layui-clear">
                     <label for="">姓名：</label>
                     <div class="right-control">
-                        <input type="text" name="name" placeholder="姓名">
+                        <input type="text" name="name" lay-verify="required|chinese" placeholder="姓名">
                     </div>
                 </div>
                 <div class="form-group layui-clear">
                     <label for="">性别：</label>
                     <div class="right-control">
-                        <label for="" class="sex"> <input type="radio" name="sex">男</label>
-                        <label for="" class="sex"> <input type="radio" name="sex">女</label>
+                      <input type="radio" name="sex" value="男" title="男" checked>
+                      <input type="radio" name="sex" value="女" title="女">
 
                     </div>
                 </div>
                 <div class="form-group layui-clear">
                     <label for="">生日：</label>
                     <div class="right-control">
-                        <input type="text" id="birthday" name="date" placeholder="生日">
+                        <input type="text" id="birthday" name="date"  lay-verify="required" placeholder="生日">
                     </div>
                 </div>
                 <div class="form-group layui-clear">
                     <label for="">邮箱：</label>
                     <div class="right-control">
-                        <input type="text" name="email" placeholder="邮箱">
+                        <input type="text" name="email" lay-verify="required|email" placeholder="邮箱">
                     </div>
                 </div>
                 <div class="form-group layui-clear">
                     <label for="">微信号：</label>
                     <div class="right-control">
-                        <input type="text" name="weixin" placeholder="微信">
+                        <input type="text" name="weixin"  placeholder="微信">
                     </div>
                 </div>
                 <div class="form-group layui-clear">
                     <label for="">QQ：</label>
                     <div class="right-control">
-                        <input type="text" name="QQ" placeholder="QQ">
+                        <input type="text" name="QQ" lay-verify="qq" placeholder="QQ">
                     </div>
                 </div>
                 <div class="form-group layui-clear">
                     <label for="">手机号：</label>
                     <div class="right-control">
-                        <input type="text" name="phone" placeholder="手机号">
+                        <input type="text" name="phone" lay-verify="required|phone" placeholder="手机号">
                     </div>
                 </div>
                 <div class="form-group layui-clear">
                     <label for="">住址：</label>
                     <div class="right-control">
-                        <input type="text" name="address" placeholder="住址">
+                        <input type="text" name="address"  placeholder="住址">
                     </div>
                 </div>
                 <div class="form-group layui-clear">
                     <label for=""></label>
                     <div class="right-control">
-                        <input type="submit" class="layui-btn" value="提交保存">
+                        <input type="submit" class="layui-btn" lay-submit="" value="提交保存">
                     </div>
                 </div>
             </div>
@@ -123,23 +123,26 @@
     </div>
     </div>
 <script src="../../../plugins/layui/layui.js"></script>
-<script src="../../../js/jquery-1.12.4.min.js"></script>
+<script src="../../../js/form-verify.js"></script>
 <script src="../../../js/back-btn.js"></script>
 <script>
-    $(function () {
-        layui.use('laydate', function(){
-            var laydate = layui.laydate;
-            var time = {
-                min: '1901-01-01 00:00:01'
-                ,max: '2099-06-16 23:59:59'
-                ,istoday: false
-            };
-            $("#birthday").on("click", function () {
-                time.elem = this;
-                laydate(time);
+    layui.use("jquery", function () {
+        var $=layui.jquery;
+        $(function () {
+            layui.use('laydate', function(){
+                var laydate = layui.laydate;
+                var time = {
+                    min: '1901-01-01 00:00:01'
+                    ,max: '2099-06-16 23:59:59'
+                    ,istoday: false
+                };
+                $("#birthday").on("click", function () {
+                    time.elem = this;
+                    laydate(time);
+                });
             });
         });
-    });
+    })
 </script>
 </body>
 </html>

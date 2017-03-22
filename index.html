@@ -32,6 +32,15 @@
 					</div>
 					<ul class="layui-nav admin-header-item">
 						<li class="layui-nav-item">
+							<a href="javascript:;" id="levelLog" >日报</a>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;" id="levelReport" >周报</a>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;" id="baidu" >百度一下</a>
+						</li>
+						<li class="layui-nav-item">
 							<a href="javascript:;" class="admin-header-user">
 								<img src="images/0.jpg" />
 								<span>苏雪伟</span>
@@ -56,6 +65,7 @@
 					</ul>
 				</div>
 			</div>
+			<!--左侧导航栏，数据为nav.js-->
 			<div class="layui-side layui-bg-black" id="admin-side">
 				<div class="layui-side-scroll" id="admin-navbar-side" lay-filter="side"></div>
 			</div>
@@ -68,6 +78,7 @@
 						</li>
 					</ul>
 					<div class="layui-tab-content" style="min-height: 150px; padding: 5px 0 0 0;">
+						<!--右侧内容页面呈现 ，通过点击左侧导航栏创建对应的iframe标签引入页面-->
 						<div class="layui-tab-item layui-show">
 							<iframe id='imp' src="main.html"></iframe>
 						</div>
@@ -90,7 +101,6 @@
 			<script type="text/javascript" src="plugins/layui/layui.js"></script>
 			<script type="text/javascript" src="datas/nav.js"></script>
 			<script src="js/index.js"></script>
-			<script src="js/jquery-1.12.4.min.js"></script>
 		</div>
 	</body>
 

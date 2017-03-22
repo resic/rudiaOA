@@ -50,8 +50,4 @@
     $(".box-action span").on("click", function () {
         $(this).parent().parent().find(".log-panel").toggleClass("layui-hide");
     })
-
-
-
-
     });

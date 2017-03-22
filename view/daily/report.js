@@ -39,6 +39,12 @@ layui.use(["jquery","element"], function () {
         }else {
             $(".post-box").removeClass("layui-hide");
         }
-
+    })
+    //点击提交按钮将内容提交，展示在文本框并禁用文本框
+    $("#post-btn").on("click", function () {
+        //var summary=$("#summary").val();
+        //var plan=$("#plan").val();
+        $("#summary").attr("disabled","disabled");
+        $("#plan").attr("disabled","disabled");
     })
 });

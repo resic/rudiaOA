@@ -15,65 +15,17 @@
     border: 1px solid #d3d3d3;
     padding:5px 10px;
 }
-/*填写日志部分*/
-.log-post{
-margin-top: 10px;
-}
-.log-post .text-box{
-    border-radius: 10px;
-    background-color: #fff;
-    transition: all 1s;
-    padding:10px 0;
-    overflow: hidden;
-    position: relative;
-}
-.log-post textarea{
-    width: 100%;
-    font-size: 16px;
-    padding:10px 30px;
-    box-sizing: border-box;
-    border: none;
-    resize: none;
-
-}
-.text-box #push-btn{
-    display: none;
-    transition: all 1s 1s;
+/*树形菜单部分*/
+.tree-menu{
+    width: 220px;
     position: absolute;
-    right: 20px;
-    bottom:10px;
+    left:20px;
 }
-.text-box .text-title{
-    font-size: 22px;
-    padding-left: 20px;
-    line-height: 50px;
-    opacity: 0;
-    position: absolute;
-    top:0;
-    transition: all 0.5s ;
-}
-.text-box.focus {
-    transition: all 1s;
-    padding: 50px 0;
-}
-.text-box.focus .text-title{
-    transition: all 1s 0.5s;
-    opacity: 1;
-}
-.text-box.focus textarea{
-
-    border-top: 1px dashed #d3d3d3;
-    border-bottom: 1px dashed #d3d3d3;
-}
-.text-box.focus #push-btn{
-    transition: all 1s;
-    display: block;
-}
-
 /*所有日志展示部分样式*/
 .log-show{
+    width: 68.66%;
     padding-left:40px;
-    margin:20px 0 0 25px;
+    margin-left:240px;
     border-left: 1px solid #d3d3d3;
     font-size: 14px;
     line-height: 1.42857143;
@@ -194,6 +146,29 @@ margin-top: 10px;
     display: inline-block;
     min-width: 120px;
     margin: 0 20px;
+}
+.comment-box .comment-write{
+    width: 90%;
+    margin: 0 auto;
+}
+.comment-box textarea{
+    width: 100%;
+    resize: none;
+    margin-top:20px;
+    display: block;
+    min-height: 120px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #d3d3d3;
+    padding:20px;
+    box-sizing: border-box;
+}
+.comment-box textarea:focus{
+    border-color:#66afe9 ;
+    box-shadow: 0 0 5px 2px rgba(102,175,233,.6);
+}
+.comment-box .comment-post{
+    margin: 10px 0;
 }
 /*响应式*/
 @media screen and (max-width: 980px){

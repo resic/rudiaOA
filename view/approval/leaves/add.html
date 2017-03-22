@@ -21,23 +21,23 @@
         </div>
     </div>
     <div class="page-body">
-        <form class="form-container" id="leave-form" action="">
+        <form class="form-container layui-form" id="leave-form" action="">
             <div class="form-heading"></div>
             <div class="form-body">
                 <div class="form-group layui-clear">
                     <label for="">任务类型：</label>
                     <div class="right-control">
-                        <select name="type" class="form-control">
-                            <option value="">类型</option>
-                            <option value="1" >事假</option>
-                            <option value="2" >病假</option>
-                            <option value="3" >年假</option>
-                            <option value="4" >调休</option>
-                            <option value="5" >婚假</option>
-                            <option value="6" >产假</option>
-                            <option value="7" >陪产假</option>
-                            <option value="8" >路途假</option>
-                            <option value="9" >其他</option>
+                        <select name="type">
+                                <option value="">请假类型</option>
+                                <option value="1" >事假</option>
+                                <option value="2" >病假</option>
+                                <option value="3" >年假</option>
+                                <option value="4" >调休</option>
+                                <option value="5" >婚假</option>
+                                <option value="6" >产假</option>
+                                <option value="7" >陪产假</option>
+                                <option value="8" >路途假</option>
+                                <option value="9" >其他</option>
                         </select>
                     </div>
 
@@ -45,21 +45,21 @@
                 <div class="form-group layui-clear">
                     <label for="">请假日期：</label>
                     <div class="right-control">
-                        <input type="text" name="start" id="start" class="time" placeholder="开始时间">
+                        <input type="text" name="start" id="start" class="time" lay-verify="required" placeholder="开始时间">
                         <span class="to">To</span>
-                        <input type="text" name="end" id="end" class="time" placeholder="结束时间">
+                        <input type="text" name="end" id="end" class="time"  lay-verify="required" placeholder="结束时间">
                     </div>
                 </div>
                 <div class="form-group layui-clear">
                     <label for="">请假天数：</label>
                     <div class="right-control">
-                        <input type="text" name="day" class="" placeholder="天数">
+                        <input type="text" name="day" class="" lay-verify="required|number" placeholder="天数">
                     </div>
                 </div>
                 <div class="form-group layui-clear">
                     <label for="">请假原因：</label>
                     <div class="right-control">
-                        <textarea name="" id="" cols="30" rows="10" placeholder="请假原因"></textarea>
+                        <textarea name="" id="" cols="30" rows="10" lay-verify="required" placeholder="请假原因"></textarea>
                     </div>
                 </div>
                 <div class="form-group layui-clear">
@@ -76,7 +76,7 @@
                 <div class="form-group layui-clear">
                     <label for=""></label>
                     <div class="right-control">
-                        <input type="submit" class="layui-btn" value="提交保存">
+                        <input type="submit" class="layui-btn" lay-submit value="提交保存">
                     </div>
                 </div>
             </div>
@@ -84,12 +84,13 @@
     </div>
     </div>
 <script src="../../../plugins/layui/layui.js"></script>
-<script src="../../../js/jquery-1.12.4.min.js"></script>
+<script src="../../../js/form-verify.js"></script>
 <script src="../../../js/back-btn.js"></script>
 <script>
-    $(function () {
+    layui.use(["jquery","laydate"], function () {
         layui.use('laydate', function(){
             var laydate = layui.laydate;
+            var $=layui.jquery;
             var start = {
                 min: laydate.now()
                 ,max: '2099-06-16 23:59:59'
@@ -107,16 +108,16 @@
                     start.max = datas; //结束日选好后，重置开始日的最大日期
                 }
             };
-           $("#start").on("click", function () {
-               start.elem = this;
-               laydate(start);
-           });
-           $("#end").on("click", function () {
-               end.elem = this
-               laydate(end);
-           });
+            $("#start").on("click", function () {
+                start.elem = this;
+                laydate(start);
+            });
+            $("#end").on("click", function () {
+                end.elem = this
+                laydate(end);
+            });
         });
-    });
+    })
 </script>
 </body>
 </html>

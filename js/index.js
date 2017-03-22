@@ -24,8 +24,6 @@ layui.config({
 		elem: '#admin-navbar-side',
 		cached: true,
 		data: navs
-			/*cached:true,
-			url: 'datas/nav.json'*/
 	});
 	//渲染navbar
 	navbar.render();
@@ -33,6 +31,30 @@ layui.config({
 	navbar.on('click(side)', function(data) {
 		tab.tabAdd(data.field);
 	});
+	//    --------------------------待删除部分 -----------------------
+	$("#levelLog").on("click", function () {
+		tab.tabAdd({
+			"title": "日报2",
+			"icon": "&#xe612;",
+			"href": "./view/levelDaily/watchLog.html"
+		})
+	})
+	$("#levelReport").on("click", function () {
+		tab.tabAdd({
+			"title": "周报2",
+			"icon": "&#xe612;",
+			"href": "./view/levelDaily/watchReport.html"
+		})
+	})
+	//百度搜索页面
+	$("#baidu").on("click", function () {
+		tab.tabAdd({
+			"title": "百度一下",
+			"icon": "&#xe612;",
+			"href": "https://www.baidu.com"
+		})
+	})
+	//    ------------------------待删除部分结束------------------------------
 	//个人信息页面添加选项卡
 	$("#personal").on("click", function () {
 		tab.tabAdd({
