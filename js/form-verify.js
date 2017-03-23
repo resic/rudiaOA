@@ -1,7 +1,8 @@
-layui.use(["form","jquery"], function () {
+layui.use(["form","jquery","element"], function () {
     var form=layui.form()
         ,layer=layui.layer
-        ,$=layui.jquery;
+        ,$=layui.jquery
+        ,element=layui.element();
 
 //    自定义部分表单验证
     form.verify({

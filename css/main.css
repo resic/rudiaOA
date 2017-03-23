@@ -15,6 +15,9 @@
 .page-content .layui-elem-field .tips span{
 	float: right;
 }
+.page-content .layui-elem-field .tips a{
+	cursor: pointer;
+}
 .page-content .layui-elem-field .tips a:hover{
 	color: #FF5722;
 }

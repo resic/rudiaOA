@@ -10,13 +10,13 @@
 </head>
 <body>
 <div class="page-content">
-    <div class="page-heading">
+    <div class="page-heading layui-clear">
         <h3>员工管理</h3>
-        <ul class="breadcrumb p-left" >
-            <li><a href="">员工管理</a>/</li>
-            <li><a href="" class="active">员工</a></li>
-        </ul>
-        <div class="breadcrumb p-right">
+        <div class="layui-breadcrumb p-left" >
+            <a href="">员工管理</a>
+            <a href=""><cite>员工</cite></a>
+        </div>
+        <div class="p-right">
             <button  class="layui-btn back-btn">返回</button>
         </div>
     </div>
@@ -126,11 +126,9 @@
 <script src="../../../js/form-verify.js"></script>
 <script src="../../../js/back-btn.js"></script>
 <script>
-    layui.use("jquery", function () {
-        var $=layui.jquery;
-        $(function () {
-            layui.use('laydate', function(){
-                var laydate = layui.laydate;
+    layui.use(["jquery","laydate"], function () {
+        var $=layui.jquery
+                , laydate = layui.laydate;
                 var time = {
                     min: '1901-01-01 00:00:01'
                     ,max: '2099-06-16 23:59:59'
@@ -141,8 +139,6 @@
                     laydate(time);
                 });
             });
-        });
-    })
 </script>
 </body>
 </html>

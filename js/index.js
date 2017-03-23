@@ -30,6 +30,7 @@ layui.config({
 	//监听点击事件
 	navbar.on('click(side)', function(data) {
 		tab.tabAdd(data.field);
+
 	});
 	//    --------------------------待删除部分 -----------------------
 	$("#levelLog").on("click", function () {
