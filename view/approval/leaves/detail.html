@@ -9,11 +9,12 @@
     <link rel="stylesheet" href="../../../css/detail.css">
 </head>
 <body>
+<script type="text/template" id="leaves-detail">
 <div class="page-content">
     <div class="page-heading layui-clear">
         <h3>审批管理</h3>
         <div class="layui-breadcrumb p-left" >
-           <a href="">审批管理</a>
+           <a href=""><%=pages[0].title%></a>
            <a href=""><cite>请假详情</cite></a>
         </div>
         <div class="p-right">
@@ -23,35 +24,34 @@
     <div class="page-body">
         <div class="wrap">
            <div class="wrap-heading">
-               <h1>请假单</h1>
-               <span>2017-03-07 15:37</span>
+               <h1><%=pages[0].title%>单</h1>
            </div>
            <div class="wrap-body">
                <div class="table-box">
                    <table>
                      <tr>
                          <td>申请人</td>
-                         <td>苏默</td>
+                         <td><%=pages[0].person[1].name%></td>
                      </tr>
                        <tr>
                            <td>部门</td>
-                           <td>研发部</td>
+                           <td><%=pages[0].person[1].depart%></td>
                        </tr>
                        <tr>
                            <td>职位</td>
-                           <td>员工</td>
+                           <td><%=pages[0].person[1].position%></td>
                        </tr>
                        <tr>
                            <td>请假日期</td>
-                           <td>2017-03-01至2017-03-07</td>
+                           <td><%=pages[0].person[1].date%></td>
                        </tr>
                        <tr>
                            <td>请假天数</td>
-                           <td>6</td>
+                           <td><%=pages[0].person[1].time%></td>
                        </tr>
                        <tr>
                            <td>请假原因</td>
-                           <td>具体原因描述</td>
+                           <td><%=pages[0].person[1].details%></td>
                        </tr>
 
                    </table>
@@ -60,12 +60,31 @@
         </div>
         <div class="approver">
             <h1>审批详情</h1>
-            <p>正在等待<span class="yellow">某某某</span>审批/已由 <span class="green">某某某</span>审批</p>
+            <p>正在等待<span class="yellow"><%=pages[0].person[1].management%></span>审批/已由 <span class="green"><%=pages[0].person[1].management%></span>审批</p>
 
         </div>
     </div>
 </div>
+</script>
 <script src="../../../plugins/layui/layui.js"></script>
 <script src="../../../js/back-btn.js"></script>
+<script src="../../../js/template-native.js"></script>
+<script>
+    layui.use("jquery", function () {
+       var $=layui.jquery;
+        $.ajax({
+            url:"../../choosePage.php"
+            ,type:"GET"
+            ,data:{"title":"请假"}
+            ,success: function (data) {
+                var datas=JSON.parse(data);
+                console.log(datas);
+                var html=template("leaves-detail",datas);
+                $("body").append(html);
+            }
+        });
+
+    });
+</script>
 </body>
 </html>

@@ -1,0 +1,99 @@
+  {
+      "department": ["部门","研发部","运维部","综合部","人事部","系统集成部"],
+      "pages": [
+          {
+              "title": "请假",
+              "total": "80",
+              "person": [
+                  {
+                      "name": "张三",
+                      "type": "事假",
+                      "depart": "开发部",
+                      "position": "员工",
+                      "date": "2017-03-07至2017-03-08",
+                      "time": "1",
+                      "status":"待审批",
+                      "details": "请假具体详情部分",
+                      "management": "谁审批"
+                  },
+                  {
+                      "name": "李四",
+                      "type": "事假",
+                      "depart": "开发部",
+                      "position": "员工",
+                      "date": "2017-03-07至2017-03-08",
+                      "time": "1",
+                      "status":"待审批",
+                      "details": "请假具体详情部分",
+                      "management": "谁审批"
+                  },
+                  {
+                      "name": "王五",
+                      "type": "事假",
+                      "depart": "人事部",
+                      "position": "员工",
+                      "date": "2017-03-07至2017-03-08",
+                      "time": "6",
+                      "status":"待审批",
+                      "details": "请假具体详情部分",
+                      "management": "谁审批"
+                  },
+                  {
+                      "name": "赵六",
+                      "type": "事假",
+                      "depart": "开发部",
+                      "position": "员工",
+                      "date": "2017-03-07至2017-03-08",
+                      "time": "1",
+                      "status":"待审批",
+                      "details": "请假具体详情部分",
+                      "management": "谁审批"
+                  },
+                  {
+                      "name": "孙七",
+                      "type": "婚假",
+                      "depart": "开发部",
+                      "position": "员工",
+                      "date": "2017-03-07至2017-03-08",
+                      "time": "7",
+                      "status":"已审批",
+                      "details": "请假具体详情部分",
+                      "management": "谁审批"
+                  },
+                  {
+                      "name": "孙七",
+                      "type": "事假",
+                      "depart": "开发部",
+                      "position": "员工",
+                      "date": "2017-03-07至2017-03-08",
+                      "time": "1",
+                      "status":"待审批",
+                      "details": "请假具体详情部分",
+                      "management": "谁审批"
+                  },
+                  {
+                      "name": "孙七",
+                      "type": "病假",
+                      "depart": "开发部",
+                      "position": "员工",
+                      "date": "2017-03-07至2017-03-08",
+                      "time": "1",
+                      "status":"待审批",
+                      "details": "请假具体详情部分",
+                      "management": "谁审批"
+                  },
+                  {
+                      "name": "孙七",
+                      "type": "事假",
+                      "depart": "开发部",
+                      "position": "员工",
+                      "date": "2017-03-07至2017-03-08",
+                      "time": "1",
+                      "status":"已审批",
+                      "details": "请假具体详情部分",
+                      "management": "谁审批"
+                  }
+              ]
+          }
+      ]
+  }

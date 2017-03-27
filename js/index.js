@@ -28,8 +28,19 @@ layui.config({
 	//渲染navbar
 	navbar.render();
 	//监听点击事件
-	navbar.on('click(side)', function(data) {
-		tab.tabAdd(data.field);
+	navbar.on('click(side)', function(info) {
+		var title=info.field.title;
+		$.ajax({
+			url:"./view/choosePage.php"
+			,type:"GET"
+			,data:{"title":title}
+			,success: function (data) {
+				var datas=JSON.parse(data);
+				window.datas=datas;
+				tab.tabAdd(info.field);
+			}
+		});
+
 
 	});
 	//    --------------------------待删除部分 -----------------------
